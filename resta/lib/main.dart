@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
-import 'pagina_inicio.dart';
+import 'pantallas/juego_tipos_pantalla.dart';
 
 void main() {
-  runApp(const AplicacionCompras());
+  runApp(const MiAppPokemon());
 }
 
-class AplicacionCompras extends StatelessWidget {
-  const AplicacionCompras({super.key});
+class MiAppPokemon extends StatelessWidget {
+  const MiAppPokemon({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Lista de Compras',
+      title: 'Trivia de Tipos Pokemon',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
       ),
-      home: const PaginaInicio(),
+      home: const JuegoTiposPantalla(),
     );
   }
 }
